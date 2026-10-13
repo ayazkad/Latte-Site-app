@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0;url=/">
+  <script>window.location.replace('/');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection...</title>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <span class="logo-text">L'Atelier <span>Latte</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="story.html" class="nav-link">Notre Histoire</a></li>
+        <li><a href="menu.html" class="nav-link">La Carte</a></li>
+        <li><a href="latte-lab.html" class="nav-link active">Latte Lab</a></li>
+        <li><a href="ambiance.html" class="nav-link">L'Expérience</a></li>
+        <li><a href="reservation.html" class="nav-link">Réservation & Horaires</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-toggle-btn" id="cartToggleBtn" aria-label="Ouvrir le panier">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="reservation.html" class="btn btn-primary nav-reserve-btn">Réserver</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu Mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <header class="page-header">
+    <div class="container">
+      <span class="badge-tag"><i class="fa-solid fa-flask"></i> Atelier Sur-Mesure</span>
+      <h1 class="page-title">Le Latte Lab</h1>
+      <p class="page-desc">Composez la boisson signature qui correspond à vos envies du moment. Votre barista préparera votre commande avec la plus grande précision.</p>
+    </div>
+  </header>
+
+  <!-- ==================== LATTE LAB / CUSTOMIZER ==================== -->
+  <section class="customizer-section">
+    <div class="container customizer-grid">
+      <div class="customizer-controls">
+        <!-- Base -->
+        <div class="config-group">
+          <div class="config-group-title"><i class="fa-solid fa-coffee-bean"></i> 1. Base Café & Arôme</div>
+          <div class="options-row" id="baseOptions">
+            <button class="option-btn selected" data-type="base" data-name="Espresso Double Éthiopie" data-price="0" data-base="espresso">Espresso Éthiopie (Floral)</button>
+            <button class="option-btn" data-type="base" data-name="Espresso Colombie" data-price="0.5" data-base="colombia">Colombie (Chocolaté) +0.50€</button>
+            <button class="option-btn" data-type="base" data-name="Matcha Cérémonial Uji" data-price="1.0" data-base="matcha">Matcha Uji Japon +1.00€</button>
+            <button class="option-btn" data-type="base" data-name="Chai Épicé Bio" data-price="0.5" data-base="chai">Chai Épicé +0.50€</button>
+          </div>
+        </div>
+
+        <!-- Milk -->
+        <div class="config-group">
+          <div class="config-group-title"><i class="fa-solid fa-cow"></i> 2. Choix du Lait</div>
+          <div class="options-row" id="milkOptions">
+            <button class="option-btn selected" data-type="milk" data-name="Lait d'Avoine Barista Bio" data-price="0.5" data-foam="dense">Avoine Barista Bio +0.50€</button>
+            <button class="option-btn" data-type="milk" data-name="Lait d'Amande Douce" data-price="0.5" data-foam="light">Amande Douce +0.50€</button>
+            <button class="option-btn" data-type="milk" data-name="Lait Entier Fermier" data-price="0" data-foam="rich">Entier Fermier (Standard)</button>
+            <button class="option-btn" data-type="milk" data-name="Lait de Coco Onctueux" data-price="0.8" data-foam="creamy">Coco Onctueux +0.80€</button>
+          </div>
+        </div>
+
+        <!-- Syrup / Flavour -->
+        <div class="config-group">
+          <div class="config-group-title"><i class="fa-solid fa-jar"></i> 3. Sirop & Épices Maison</div>
+          <div class="options-row" id="syrupOptions">
+            <button class="option-btn selected" data-type="syrup" data-name="Sans Sirop (Pur)" data-price="0">Nature / Sans Sirop</button>
+            <button class="option-btn" data-type="syrup" data-name="Caramel Beurre Salé Guérande" data-price="0.8">Caramel Salé +0.80€</button>
+            <button class="option-btn" data-type="syrup" data-name="Vanille de Madagascar" data-price="0.8">Vanille Bourbon +0.80€</button>
+            <button class="option-btn" data-type="syrup" data-name="Noisette Torréfiée" data-price="0.8">Noisette Grillée +0.80€</button>
+          </div>
+        </div>
+
+        <!-- Temperature -->
+        <div class="config-group">
+          <div class="config-group-title"><i class="fa-solid fa-temperature-half"></i> 4. Température</div>
+          <div class="options-row" id="tempOptions">
+            <button class="option-btn selected" data-type="temp" data-name="Chaud Velouté (65°C)" data-temp="hot">☕ Chaud Velouté</button>
+            <button class="option-btn" data-type="temp" data-name="Iced / Sur Glaçons Cristallins" data-temp="cold">🧊 Iced (Glaçons)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Preview Box -->
+      <div class="customizer-preview-box">
+        <span class="badge-tag">Aperçu de Votre Recette</span>
+        
+        <div class="cup-visual-wrapper">
+          <div class="cup-steam" id="cupSteam">💨</div>
+          <div class="cup-graphic" id="cupGraphic">
+            <div class="cup-layer-base" id="cupLayerBase"></div>
+            <div class="cup-layer-milk" id="cupLayerMilk"></div>
+            <div class="cup-layer-foam" id="cupLayerFoam">🌿</div>
+          </div>
+        </div>
+
+        <h3 id="customDrinkTitle">Latte Signature Avoine</h3>
+        <p id="customDrinkDesc">
+          Espresso Double Éthiopie • Lait d'Avoine Barista • Chaud Velouté
+        </p>
+
+        <div class="customizer-summary-card">
+          <div class="summary-details">
+            <span>Prix personnalisé :</span>
+            <span class="custom-total-price" id="customPrice">5.50 €</span>
+          </div>
+          <button class="btn btn-primary" id="addCustomDrinkBtn">
+            <i class="fa-solid fa-plus"></i> Ajouter Cette Création au Panier
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CART DRAWER ==================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Votre Commande</h3>
+      <button class="cart-close-btn" id="cartCloseBtn">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList"></div>
+
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Sous-total</span>
+        <span id="cartSubtotalPrice">0.00 €</span>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn">
+        <i class="fa-solid fa-credit-card"></i> Valider le Click & Collect
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== TOAST NOTIFICATIONS ==================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+          <span class="logo-text">L'Atelier <span>Latte</span></span>
+        </div>
+        <p>L'excellence du café de spécialité et l'art de vivre moderne réunis dans un espace chaleureux et raffiné.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="story.html">Notre Histoire</a></li>
+          <li><a href="menu.html">La Carte</a></li>
+          <li><a href="latte-lab.html">Latte Lab</a></li>
+          <li><a href="reservation.html">Réservations</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Spécialités</h4>
+        <ul class="footer-links">
+          <li><a href="menu.html">Swan Latte Art</a></li>
+          <li><a href="menu.html">Cold Brew Éthiopie</a></li>
+          <li><a href="menu.html">Matcha Cérémonial Uji</a></li>
+          <li><a href="menu.html">Cardamome Buns</a></li>
+          <li><a href="menu.html">Brunch Gourmet</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Rejoignez le Club</h4>
+        <p class="newsletter-desc">Recevez nos invitations exclusives et découvrez nos arrivages de cafés rares.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit" class="btn btn-primary newsletter-submit-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>© 2026 L'Atelier du Latte. Tous droits réservés.</div>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

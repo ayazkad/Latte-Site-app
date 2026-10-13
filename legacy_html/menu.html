@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0;url=/menu">
+  <script>window.location.replace('/menu');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection...</title>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <span class="logo-text">L'Atelier <span>Latte</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="story.html" class="nav-link">Notre Histoire</a></li>
+        <li><a href="menu.html" class="nav-link active">La Carte</a></li>
+        <li><a href="latte-lab.html" class="nav-link">Latte Lab</a></li>
+        <li><a href="ambiance.html" class="nav-link">L'Expérience</a></li>
+        <li><a href="reservation.html" class="nav-link">Réservation & Horaires</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-toggle-btn" id="cartToggleBtn" aria-label="Ouvrir le panier">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="reservation.html" class="btn btn-primary nav-reserve-btn">Réserver</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu Mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <header class="page-header">
+    <div class="container">
+      <span class="badge-tag"><i class="fa-solid fa-book-open"></i> Carte de Saison</span>
+      <h1 class="page-title">Nos Créations & Spécialités</h1>
+      <p class="page-desc">Chaque recette est élaborée avec nos cafés de terroir et ingrédients biologiques soigneusement choisis.</p>
+    </div>
+  </header>
+
+  <!-- ==================== MENU SECTION ==================== -->
+  <section class="menu-section">
+    <div class="container">
+      <!-- Categories Tabs -->
+      <div class="menu-categories" id="menuTabs">
+        <button class="category-tab active" data-category="all">
+          <i class="fa-solid fa-border-all"></i> Tout
+        </button>
+        <button class="category-tab" data-category="latte">
+          <i class="fa-solid fa-mug-hot"></i> Lattes Signatures
+        </button>
+        <button class="category-tab" data-category="espresso">
+          <i class="fa-solid fa-bolt"></i> Espresso Bar
+        </button>
+        <button class="category-tab" data-category="cold">
+          <i class="fa-solid fa-snowflake"></i> Iced & Cold Brew
+        </button>
+        <button class="category-tab" data-category="pastry">
+          <i class="fa-solid fa-cookie-bite"></i> Pâtisseries & Brunch
+        </button>
+      </div>
+
+      <!-- Menu Grid (populated by JS) -->
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==================== CART DRAWER ==================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Votre Commande</h3>
+      <button class="cart-close-btn" id="cartCloseBtn">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList"></div>
+
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Sous-total</span>
+        <span id="cartSubtotalPrice">0.00 €</span>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn">
+        <i class="fa-solid fa-credit-card"></i> Valider le Click & Collect
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== TOAST NOTIFICATIONS ==================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+          <span class="logo-text">L'Atelier <span>Latte</span></span>
+        </div>
+        <p>L'excellence du café de spécialité et l'art de vivre moderne réunis dans un espace chaleureux et raffiné.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="story.html">Notre Histoire</a></li>
+          <li><a href="menu.html">La Carte</a></li>
+          <li><a href="latte-lab.html">Latte Lab</a></li>
+          <li><a href="reservation.html">Réservations</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Spécialités</h4>
+        <ul class="footer-links">
+          <li><a href="menu.html">Swan Latte Art</a></li>
+          <li><a href="menu.html">Cold Brew Éthiopie</a></li>
+          <li><a href="menu.html">Matcha Cérémonial Uji</a></li>
+          <li><a href="menu.html">Cardamome Buns</a></li>
+          <li><a href="menu.html">Brunch Gourmet</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Rejoignez le Club</h4>
+        <p class="newsletter-desc">Recevez nos invitations exclusives et découvrez nos arrivages de cafés rares.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit" class="btn btn-primary newsletter-submit-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>© 2026 L'Atelier du Latte. Tous droits réservés.</div>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

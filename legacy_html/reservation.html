@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0;url=/reservation">
+  <script>window.location.replace('/reservation');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection...</title>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <span class="logo-text">L'Atelier <span>Latte</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="story.html" class="nav-link">Notre Histoire</a></li>
+        <li><a href="menu.html" class="nav-link">La Carte</a></li>
+        <li><a href="latte-lab.html" class="nav-link">Latte Lab</a></li>
+        <li><a href="ambiance.html" class="nav-link">L'Expérience</a></li>
+        <li><a href="reservation.html" class="nav-link active">Réservation & Horaires</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-toggle-btn" id="cartToggleBtn" aria-label="Ouvrir le panier">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="reservation.html" class="btn btn-primary nav-reserve-btn">Réserver</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu Mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <header class="page-header">
+    <div class="container">
+      <span class="badge-tag"><i class="fa-solid fa-calendar-check"></i> En Ligne</span>
+      <h1 class="page-title">Réservation & Horaires</h1>
+      <p class="page-desc">Planifiez votre visite pour un moment de détente, un déjeuner gourmand ou une session de coworking.</p>
+    </div>
+  </header>
+
+  <!-- ==================== RESERVATION & HOURS ==================== -->
+  <section class="reservation-section">
+    <div class="container reservation-grid">
+      <!-- Hours & Location -->
+      <div class="hours-info-card">
+        <span class="badge-tag"><i class="fa-solid fa-location-dot"></i> Nous Trouver</span>
+        <h3>Horaires & Adresse</h3>
+        <p class="address-text">
+          <i class="fa-solid fa-map-pin text-gold"></i> 24 Rue de la Paix, 75002 Paris
+        </p>
+
+        <ul class="hours-list">
+          <li class="hours-item highlight">
+            <span class="day">Lundi - Vendredi</span>
+            <span class="time">08h00 - 19h00</span>
+          </li>
+          <li class="hours-item highlight">
+            <span class="day">Samedi</span>
+            <span class="time">09h00 - 20h00</span>
+          </li>
+          <li class="hours-item highlight">
+            <span class="day">Dimanche (Brunch)</span>
+            <span class="time">09h30 - 18h30</span>
+          </li>
+        </ul>
+
+        <div class="wifi-card">
+          <i class="fa-solid fa-wifi wifi-icon"></i>
+          <div class="wifi-text">
+            <h5>Espace Coworking & Wi-Fi Haut Débit</h5>
+            <p>Prises individuelles et atmosphère calme le matin.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="booking-form-box">
+        <span class="badge-tag"><i class="fa-solid fa-calendar-check"></i> Formulaire</span>
+        <h3>Réserver une Table</h3>
+        
+        <form id="reservationForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="resName">Nom complet</label>
+              <input type="text" id="resName" class="form-control" placeholder="ex. Alexandre Dubois" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="resEmail">Email</label>
+              <input type="email" id="resEmail" class="form-control" placeholder="alexandre@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="resDate">Date</label>
+              <input type="date" id="resDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="resTime">Heure</label>
+              <select id="resTime" class="form-control" required>
+                <option value="09:00">09:00 (Matinée calme)</option>
+                <option value="10:30">10:30 (Pause Café)</option>
+                <option value="12:00">12:00 (Déjeuner / Brunch)</option>
+                <option value="13:30">13:30 (Brunch)</option>
+                <option value="15:30">15:30 (Goûter & Latte)</option>
+                <option value="17:00">17:00 (Fin d'après-midi)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="resGuests">Nombre d'invités</label>
+            <select id="resGuests" class="form-control" required>
+              <option value="1">1 Personne (Table solo / Coworking)</option>
+              <option value="2" selected>2 Personnes</option>
+              <option value="3">3 Personnes</option>
+              <option value="4">4 Personnes</option>
+              <option value="5+">5+ Personnes (Grande table salon)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="resNotes">Demande spécifique (optionnel)</label>
+            <textarea id="resNotes" class="form-control" rows="2" placeholder="Précisez vos préférences (près de la baie vitrée, intolérances, etc.)"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary confirm-booking-btn">
+            <i class="fa-solid fa-check"></i> Confirmer la Réservation
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CART DRAWER ==================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Votre Commande</h3>
+      <button class="cart-close-btn" id="cartCloseBtn">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList"></div>
+
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Sous-total</span>
+        <span id="cartSubtotalPrice">0.00 €</span>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn">
+        <i class="fa-solid fa-credit-card"></i> Valider le Click & Collect
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== TOAST NOTIFICATIONS ==================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+          <span class="logo-text">L'Atelier <span>Latte</span></span>
+        </div>
+        <p>L'excellence du café de spécialité et l'art de vivre moderne réunis dans un espace chaleureux et raffiné.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="story.html">Notre Histoire</a></li>
+          <li><a href="menu.html">La Carte</a></li>
+          <li><a href="latte-lab.html">Latte Lab</a></li>
+          <li><a href="reservation.html">Réservations</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Spécialités</h4>
+        <ul class="footer-links">
+          <li><a href="menu.html">Swan Latte Art</a></li>
+          <li><a href="menu.html">Cold Brew Éthiopie</a></li>
+          <li><a href="menu.html">Matcha Cérémonial Uji</a></li>
+          <li><a href="menu.html">Cardamome Buns</a></li>
+          <li><a href="menu.html">Brunch Gourmet</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Rejoignez le Club</h4>
+        <p class="newsletter-desc">Recevez nos invitations exclusives et découvrez nos arrivages de cafés rares.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit" class="btn btn-primary newsletter-submit-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>© 2026 L'Atelier du Latte. Tous droits réservés.</div>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

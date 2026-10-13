@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0;url=/story">
+  <script>window.location.replace('/story');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection...</title>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <span class="logo-text">L'Atelier <span>Latte</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="story.html" class="nav-link active">Notre Histoire</a></li>
+        <li><a href="menu.html" class="nav-link">La Carte</a></li>
+        <li><a href="latte-lab.html" class="nav-link">Latte Lab</a></li>
+        <li><a href="ambiance.html" class="nav-link">L'Expérience</a></li>
+        <li><a href="reservation.html" class="nav-link">Réservation & Horaires</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-toggle-btn" id="cartToggleBtn" aria-label="Ouvrir le panier">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="reservation.html" class="btn btn-primary nav-reserve-btn">Réserver</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu Mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <header class="page-header">
+    <div class="container">
+      <span class="badge-tag"><i class="fa-solid fa-seedling"></i> Notre Savoir-Faire</span>
+      <h1 class="page-title">Notre Histoire & Philosophie</h1>
+      <p class="page-desc">L'art de sélectionner, torréfier et sublimer les plus grands terroirs de café de spécialité.</p>
+    </div>
+  </header>
+
+  <!-- ==================== STORY CONTENT ==================== -->
+  <section class="story-section">
+    <div class="container story-grid">
+      <div class="story-images">
+        <div class="story-img-main">
+          <img src="assets/images/ambiance.jpg" alt="Ambiance chaleureuse et raffinée du coffee shop">
+        </div>
+        <div class="story-experience-badge">
+          <div class="badge-number">8+</div>
+          <div class="badge-label">Années d'excellence</div>
+        </div>
+      </div>
+
+      <div class="story-content">
+        <div class="section-header">
+          <h2 class="section-title">De la cerise de café jusqu'à votre tasse</h2>
+        </div>
+
+        <p class="story-desc-main">
+          Chez <strong>L'Atelier Latte</strong>, chaque tasse raconte une histoire. Nous collaborons directement avec des producteurs éthiques en Éthiopie, en Colombie et au Guatemala pour sélectionner des micros-lots récoltés à la main.
+        </p>
+
+        <p class="story-desc-sub">
+          Notre approche marie précision scientifique de l'extraction lente et délicatesse artistique du barista afin d'offrir une texture soyeuse et des arômes inoubliables.
+        </p>
+
+        <div class="story-features">
+          <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <h4>Torréfaction Maison</h4>
+            <p>Profils de cuisson sur-mesure pour révéler les notes florales et cacaotées.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-droplet"></i></div>
+            <h4>Laits Végétaux Nobles</h4>
+            <p>Lait d'avoine barista crémeux, amande torréfiée et noix de coco artisanale.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h4>Fait Maison & Bio</h4>
+            <p>Pâtisseries fraîches du matin préparées avec des farines de terroir.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <h4>Extraction Slow Coffee</h4>
+            <p>Méthodes douces V60, Chemex et Cold Brew infusé à froid pendant 18h.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CART DRAWER ==================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Votre Commande</h3>
+      <button class="cart-close-btn" id="cartCloseBtn">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList"></div>
+
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Sous-total</span>
+        <span id="cartSubtotalPrice">0.00 €</span>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn">
+        <i class="fa-solid fa-credit-card"></i> Valider le Click & Collect
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== TOAST NOTIFICATIONS ==================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+          <span class="logo-text">L'Atelier <span>Latte</span></span>
+        </div>
+        <p>L'excellence du café de spécialité et l'art de vivre moderne réunis dans un espace chaleureux et raffiné.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="story.html">Notre Histoire</a></li>
+          <li><a href="menu.html">La Carte</a></li>
+          <li><a href="latte-lab.html">Latte Lab</a></li>
+          <li><a href="reservation.html">Réservations</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Spécialités</h4>
+        <ul class="footer-links">
+          <li><a href="menu.html">Swan Latte Art</a></li>
+          <li><a href="menu.html">Cold Brew Éthiopie</a></li>
+          <li><a href="menu.html">Matcha Cérémonial Uji</a></li>
+          <li><a href="menu.html">Cardamome Buns</a></li>
+          <li><a href="menu.html">Brunch Gourmet</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Rejoignez le Club</h4>
+        <p class="newsletter-desc">Recevez nos invitations exclusives et découvrez nos arrivages de cafés rares.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit" class="btn btn-primary newsletter-submit-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>© 2026 L'Atelier du Latte. Tous droits réservés.</div>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
